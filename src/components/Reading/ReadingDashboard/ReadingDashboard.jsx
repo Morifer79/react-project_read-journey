@@ -7,12 +7,11 @@ import { selectReadBook } from '../../../redux/books/booksSelectors';
 
 export const ReadingDashboard = () => {
   const books = useSelector(selectReadBook);
-  console.log(books);
   
   return (
     <Dashboard>
       <AddReading />
-      {books.timeLeftToRead ? <ProgressBlock /> : <Details />}
+      {books.status === 'unread' ? <ProgressBlock /> : <Details /> }
     </Dashboard>
   );
 };

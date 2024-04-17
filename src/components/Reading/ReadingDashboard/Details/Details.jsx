@@ -1,8 +1,10 @@
-import { useState } from 'react';
 import { DiaryBlock } from './DiaryBlock/DiaryBlock';
 import { StatisticsBlock } from './StatisticsBlock/StatisticsBlock';
+import { useSelector } from 'react-redux';
+import { selectReadBook } from '../../../../redux/books/booksSelectors';
 
 export const Details = () => {
-  const [isClick] = useState(false); // прокинуть сюда пропсом ❗ 
-  return <>{isClick ? <StatisticsBlock /> : <DiaryBlock />}</>
+  const readBook = useSelector(selectReadBook);  
+
+  return <>{readBook.timeLeftToRead ? <StatisticsBlock /> : <DiaryBlock />}</>;
 };

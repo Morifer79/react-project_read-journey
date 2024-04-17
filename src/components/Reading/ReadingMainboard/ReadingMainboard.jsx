@@ -9,7 +9,7 @@ import noImg from '../../../images/no-image.png';
 export const ReadingMainboard = () => {
   const [show, setShow] = useState(false);
   const books = useSelector(selectReadBook);
-  const { imageUrl, title, author, timeLeftToRead } = books;
+  const { imageUrl, title, author, timeLeftToRead, status } = books;
 
   const toggleTime = () => {
     setShow(!show);
@@ -40,13 +40,13 @@ export const ReadingMainboard = () => {
             <h5>{author}</h5>
           </div>
           <BtnStartStop onClick={toggleTime}>
-            {timeLeftToRead ? (
+            {!timeLeftToRead && status !== 'unread' ? (
               <svg>
-                <use xlinkHref={`${SpriteIcons}#icon-start`} />
+                <use xlinkHref={`${SpriteIcons}#icon-stop`} />
               </svg>
             ) : (
               <svg>
-                <use xlinkHref={`${SpriteIcons}#icon-stop`} />
+                <use xlinkHref={`${SpriteIcons}#icon-start`} />
               </svg>
             )}
           </BtnStartStop>
