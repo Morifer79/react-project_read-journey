@@ -12,7 +12,7 @@ export const ReadingMainboard = () => {
   const { imageUrl, title, author, timeLeftToRead, status } = books;
 
   const toggleTime = () => {
-    setShow(!show);
+    return timeLeftToRead.hours !== 'undefined' ? setShow(!show) : null;
   };
 
   return (
