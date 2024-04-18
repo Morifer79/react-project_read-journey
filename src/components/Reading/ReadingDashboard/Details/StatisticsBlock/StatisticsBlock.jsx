@@ -1,13 +1,17 @@
+import { Circle } from 'rc-progress';
+import { useBooks } from '../../../../../hooks/useBooks';
 import {
+  CircleWrapper,
   ProgressClr,
   Quotation,
   StatisticsBody,
   Wrapper,
 } from './StatisticsBlock.styled';
-import ring from '../../../../../images/progress-ring.png';
 
 export const StatisticsBlock = () => {
-
+  const { readBook } = useBooks();
+  const { status, totalPages } = readBook;
+  
   return (
     <>
       <Quotation>
@@ -16,13 +20,22 @@ export const StatisticsBlock = () => {
         history.
       </Quotation>
       <StatisticsBody>
-        <img src={ring} alt="progress" />
+        <CircleWrapper>
+          <Circle
+            percent={15}
+            strokeWidth={8}
+            trailWidth={8}
+            strokeColor="#30B94D"
+            trailColor="#1F1F1F"
+          />
+        </CircleWrapper>
         <span>100%</span>
         <Wrapper>
           <ProgressClr />
           <div>
-            <h4>100 %</h4>
-            <h5>50 pages read</h5>
+            {/* временное решение ❗ */}
+            <h4>{status} %</h4>
+            <h5>{totalPages} pages read</h5>
           </div>
         </Wrapper>
       </StatisticsBody>

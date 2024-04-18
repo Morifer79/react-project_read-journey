@@ -33,22 +33,6 @@ export const StatisticsBody = styled.div`
     padding: ${theme.spacing(10)};
   }
 
-  img {
-    margin-block-end: ${theme.spacing(10.5)};
-    inline-size: 116px;
-    block-size: 116px;
-    @media screen and (min-width: 768px) {
-      margin-block-end: ${theme.spacing(8)};
-      inline-size: 138px;
-      block-size: 138px;
-    }
-    @media screen and (min-width: 1440px) {
-      margin-block-end: ${theme.spacing(10)};
-      inline-size: 168px;
-      block-size: 168px;
-    }
-  }
-
   span {
     position: absolute;
     top: 69px;
@@ -61,7 +45,7 @@ export const StatisticsBody = styled.div`
       line-height: 1;
     }
     @media screen and (min-width: 1440px) {
-      top: 95px;
+      top: 100px;
     }
   }
 
@@ -86,6 +70,22 @@ export const StatisticsBody = styled.div`
       font-size: 12px;
       line-height: 1.166;
     }
+  }
+`;
+
+export const CircleWrapper = styled.div`
+  margin-block-end: ${theme.spacing(10.5)};
+  inline-size: 116px;
+  block-size: 116px;
+  @media screen and (min-width: 768px) {
+    margin-block-end: ${theme.spacing(8)};
+    inline-size: 138px;
+    block-size: 138px;
+  }
+  @media screen and (min-width: 1440px) {
+    margin-block: ${theme.spacing(5)} ${theme.spacing(10)};
+    inline-size: 168px;
+    block-size: 168px;
   }
 `;
 

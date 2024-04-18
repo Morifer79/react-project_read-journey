@@ -59,7 +59,7 @@ export const DiaryBody = styled.div`
   }
   @media screen and (min-width: 1440px) {
     padding: ${theme.spacing(10)};
-    max-block-size: none;
+    max-block-size: 373px;
   }
 
   ul {
@@ -91,13 +91,14 @@ export const VerticalLine = styled.div`
   background: ${theme.colors.primary};
 
   @media screen and (min-width: 768px) {
-    height: 328px;
+    height: 100%;
     left: 25px;
     right: 295px;
     bottom: -61px;
   }
 
   @media screen and (min-width: 1440px) {
+    height: 100%;
     left: 29px;
   }
 `;
