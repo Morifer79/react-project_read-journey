@@ -1,15 +1,14 @@
 import { Mainboard } from 'components/Constructor/Mainboard/Mainboard';
 import { BtnStartStop, ImageBox, InfoBlock } from './ReadingMainboard.styled';
-import { selectReadBook } from '../../../redux/books/booksSelectors';
 import { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useBooks } from '../../../hooks/useBooks';
 import SpriteIcons from '../../../images/sprite.svg';
 import noImg from '../../../images/no-image.png';
 
 export const ReadingMainboard = () => {
   const [show, setShow] = useState(false);
-  const books = useSelector(selectReadBook);
-  const { imageUrl, title, author, timeLeftToRead, status } = books;
+  const { readBook } = useBooks();
+  const { imageUrl, title, author, timeLeftToRead, status } = readBook;
 
   const toggleTime = () => {
     return timeLeftToRead.hours !== 'undefined' ? setShow(!show) : null;

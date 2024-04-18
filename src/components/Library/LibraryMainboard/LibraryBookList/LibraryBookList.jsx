@@ -1,19 +1,24 @@
 import { LibraryBookCard } from './LibraryBookCard/LibraryBookCard';
-import { FlexBox, LibraryList, NoImageBox, StyledSelect } from './LibraryBookList.styled';
+import {
+  FlexBox,
+  LibraryList,
+  NoImageBox,
+  StyledSelect,
+} from './LibraryBookList.styled';
 import books from '../../../../images/books.png';
-import { useDispatch, useSelector } from 'react-redux';
-import { selectNewBooks } from '../../../../redux/books/booksSelectors';
+import { useDispatch } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { getOwnBook } from '../../../../redux/books/booksOperations';
 import { BtnWrapper } from 'components/Recommended/RecommendedMainboard/Pagination/Pagination.styled';
 import { Form, Formik } from 'formik';
+import { useBooks } from '../../../../hooks/useBooks';
 
 export const LibraryBookList = () => {
   const [selectedBooks, setSelectedBooks] = useState('All books');
   const dispatch = useDispatch();
-  const newBook = useSelector(selectNewBooks);  
+  const { newBook } = useBooks();
 
-  const handleSelectedBooks = (e) => {
+  const handleSelectedBooks = e => {
     setSelectedBooks(e.target.value);
     // dispatch(getOwnBook(e.target.value));
   };

@@ -1,15 +1,15 @@
 import { BtnDel, LeftSide, RightSide } from './DiaryItem.styled';
-import { selectReadBook } from '../../../../../../redux/books/booksSelectors';
 import { removeReading } from '../../../../../../redux/books/booksOperations';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import SpriteIcons from '../../../../../../images/sprite.svg';
+import { useBooks } from '../../../../../../hooks/useBooks';
 
 export const DiaryItem = ({ info }) => {
   const dispatch = useDispatch();
-  const bookInfo = useSelector(selectReadBook);
+  const {readBook} = useBooks();
 
   const { startReading, finishReading, startPage, finishPage, speed, _id } = info;
-  const { totalPages, timeLeftToRead } = bookInfo;
+  const { totalPages, timeLeftToRead } = readBook;
 
   const convertDate = timeData => {
     const date = new Date(timeData);
@@ -25,7 +25,7 @@ export const DiaryItem = ({ info }) => {
   const finishConvertDate = convertDate(finishDate);
   const percentage = ((finishPage / totalPages) * 100).toFixed(2);
   const page = finishPage - startPage;
-  const bookId = bookInfo._id;
+  const bookId = readBook._id;
 
   const deleteProgressPoint = _id => {
     dispatch(removeReading({ bookId, readingId:_id }));

@@ -1,26 +1,30 @@
-import { RecommendedBooks, RecommendedBookslist, StyledLink } from "./RecommendedBooksBlock.styled";
+import {
+  RecommendedBooks,
+  RecommendedBookslist,
+  StyledLink,
+} from './RecommendedBooksBlock.styled';
 import SpriteIcons from '../../../../images/sprite.svg';
 import noImg from '../../../../images/no-image.png';
-import { useDispatch, useSelector } from "react-redux";
-import { selectBooks } from "../../../../redux/books/booksSelectors";
-import { useEffect, useState } from "react";
+import { useDispatch } from 'react-redux';
+import { useEffect, useState } from 'react';
 import { getAll } from '../../../../redux/books/booksOperations';
+import { useBooks } from '../../../../hooks/useBooks';
 
 export const RecommendedBooksBlock = () => {
   const [page] = useState(1);
   const [limit] = useState(3);
   const dispatch = useDispatch();
-  const allBooks = useSelector(selectBooks);
+  const { books } = useBooks();
 
-    useEffect(() => {
-      dispatch(getAll({ page, limit }));
-    }, [dispatch, page, limit]);
-  
+  useEffect(() => {
+    dispatch(getAll({ page, limit }));
+  }, [dispatch, page, limit]);
+
   return (
     <RecommendedBooks>
       <h3>Recommended</h3>
       <RecommendedBookslist>
-        {allBooks.map(book => (
+        {books.map(book => (
           <li key={book._id}>
             <img src={book.imageUrl ? book.imageUrl : noImg} alt={book.title} />
             <h4>{book.title}</h4>

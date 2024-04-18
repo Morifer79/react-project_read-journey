@@ -1,17 +1,16 @@
 import { BtnWrapper } from 'components/Recommended/RecommendedDashboard/FilterBlock/FilterBlock.styled';
 import { BtnSlider } from './Pagination.styled';
 import { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { selectBooks } from '../../../../redux/books/booksSelectors';
+import { useDispatch } from 'react-redux';
 import { getAll } from '../../../../redux/books/booksOperations';
 import SpriteIcons from '../../../../images/sprite.svg';
+import { useBooks } from '../../../../hooks/useBooks';
 
 export const Pagination = () => {
   const [page, setPage] = useState(1);
   const [limit] = useState(10);
   const dispatch = useDispatch();
-  const book = useSelector(selectBooks);
-  const totalPage = book.totalPages;
+  const { totalPage } = useBooks();
 
   const toBack = () => (page === 1 ? undefined : setPage(page - 1));
   const toForward = () => (page === totalPage ? undefined : setPage(page + 1));
@@ -36,7 +35,7 @@ export const Pagination = () => {
         <BtnSlider
           type="button"
           onClick={toForward}
-          style={{ stroke: totalPage === page ? '#686868' : '#fff' }}
+          style={{ stroke: page === totalPage ? '#686868' : '#fff' }}
         >
           <svg>
             <use xlinkHref={`${SpriteIcons}#icon-chevron-right`} />

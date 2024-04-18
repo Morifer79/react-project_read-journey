@@ -2,16 +2,15 @@ import { Dashboard } from 'components/Constructor/Dashboard/Dashboard';
 import { AddReading } from './AddReading/AddReading';
 import { ProgressBlock } from './ProgressBlock/ProgressBlock';
 import { Details } from './Details/Details';
-import { useSelector } from 'react-redux';
-import { selectReadBook } from '../../../redux/books/booksSelectors';
+import { useBooks } from '../../../hooks/useBooks';
 
 export const ReadingDashboard = () => {
-  const books = useSelector(selectReadBook);
-  
+  const { newBook } = useBooks();
+
   return (
     <Dashboard>
       <AddReading />
-      {books.status === 'unread' ? <ProgressBlock /> : <Details /> }
+      {newBook.status === 'unread' ? <ProgressBlock /> : <Details />}
     </Dashboard>
   );
 };

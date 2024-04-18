@@ -9,10 +9,10 @@ import {
   Text,
 } from 'components/Recommended/RecommendedDashboard/FilterBlock/FilterBlock.styled';
 import { Form, Formik } from 'formik';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { saveFinish, saveStart } from '../../../../redux/books/booksOperations';
 import { useState } from 'react';
-import { selectReadBook } from '../../../../redux/books/booksSelectors';
+import { useBooks } from '../../../../hooks/useBooks';
 import { PopUp } from 'components/PopUp/PopUp';
 import { EndReading } from 'components/PopUp/Notifications/EndReading';
 import toast from 'react-hot-toast';
@@ -22,8 +22,8 @@ export const AddReading = () => {
   const [isReading, setIsReading] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const dispatch = useDispatch();
-  const readableBook = useSelector(selectReadBook);
-  const id = readableBook._id;
+  const { readBook } = useBooks();
+  const id = readBook._id;
 
   const pageSchema = Yup.object({
     page: Yup.number()
@@ -42,14 +42,14 @@ export const AddReading = () => {
     if (!isReading) {
       dispatch(saveStart({ id, page }));
       toast.success('The reading has begun...');
-      if (readableBook.totalPages === parseInt(page)) {
+      if (readBook.totalPages === parseInt(page)) {
         toast.success('You`ve read to the end.');
       }
       setIsReading(!isReading);
     } else if (isReading) {
       dispatch(saveFinish({ id, page }));
       toast.success('The reading is complete...');
-      if (readableBook.totalPages === parseInt(page)) {
+      if (readBook.totalPages === parseInt(page)) {
         setIsModalOpen(true);
         document.body.style.overflow = 'hidden';
       }

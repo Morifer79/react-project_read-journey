@@ -2,22 +2,19 @@ import styled from 'styled-components';
 import { theme } from '../../../../styleset/theme';
 
 export const Booklist = styled.ul`
-  @media screen and (max-width: 1439px) {
-    justify-content: center;
-  }
-  margin: 0 auto;
   margin-block-start: ${theme.spacing(11)};
-  display: flex;
+  display: grid;
+  grid-template: 248px / repeat(2, 137px);
   gap: ${theme.spacing(10.5)};
-
+  justify-content: center;
   @media screen and (min-width: 768px) {
     margin-block-start: ${theme.spacing(10)};
-    flex-wrap: wrap;
-    gap: ${theme.spacing(12.5)};
+    grid-template: repeat(2, 248px) / repeat(4, 137px);
+    gap: ${theme.spacing(13.5)} ${theme.spacing(12.5)};
   }
-
   @media screen and (min-width: 1440px) {
-    justify-content: space-between; // временно
-    gap: ${theme.spacing(10)};
+    display: grid;
+    grid-template: repeat(2, 248px) / repeat(5, 137px);
+    gap: ${theme.spacing(13.5)} ${theme.spacing(10)};
   }
 `;

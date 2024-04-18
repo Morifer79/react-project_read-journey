@@ -7,6 +7,7 @@ import {
 import ring from '../../../../../images/progress-ring.png';
 
 export const StatisticsBlock = () => {
+
   return (
     <>
       <Quotation>
@@ -20,8 +21,8 @@ export const StatisticsBlock = () => {
         <Wrapper>
           <ProgressClr />
           <div>
-            <h4>19.14%</h4>
-            <h5>171 pages read</h5>
+            <h4>100 %</h4>
+            <h5>50 pages read</h5>
           </div>
         </Wrapper>
       </StatisticsBody>

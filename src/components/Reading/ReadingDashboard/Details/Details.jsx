@@ -9,13 +9,16 @@ import SpriteIcons from '../../../../images/sprite.svg';
 import { useState } from 'react';
 
 export const Details = () => {
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
+
   const diaryClick = () => {
     setShow(true);
   };
+
   const detailsClick = () => {
     setShow(false);
   };
+
   return (
     <>
       <FlexWrapper>

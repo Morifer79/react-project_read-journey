@@ -1,16 +1,15 @@
 import { BtnAdd, ModalBody } from './RecommendedModalContent.styled';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import noImg from '../../../images/no-image.png';
 import { addExistBooks } from '../../../redux/books/booksOperations';
-import { selectNewBooks } from '../../../redux/books/booksSelectors';
 import toast from 'react-hot-toast';
+import { useBooks } from '../../../hooks/useBooks';
 
 export const RecommendedModalContent = ({ books }) => {
-
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const newBook = useSelector(selectNewBooks);
+  const { newBook } = useBooks();
   const { imageUrl, title, author, totalPages, _id } = books;
 
   const handleClick = () => {
