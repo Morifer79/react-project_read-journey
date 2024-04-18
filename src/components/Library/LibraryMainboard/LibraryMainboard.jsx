@@ -1,10 +1,10 @@
 import { Mainboard } from 'components/Constructor/Mainboard/Mainboard';
-import { LibraryBookList } from './LibraryBookList/LibraryBookList';
+import { SelectionBlock } from './SelectionBlock/SelectionBlock';
 
 export const LibraryMainboard = () => {
   return (
     <Mainboard>
-      <LibraryBookList />
+      <SelectionBlock />
     </Mainboard>
   );
 };

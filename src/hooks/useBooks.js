@@ -4,6 +4,7 @@ import {
   selectTotalPage,
   selectNewBooks,
   selectReadBook,
+  selectOwnBook,
 } from '../redux/books/booksSelectors';
 
 export const useBooks = () => {
@@ -11,11 +12,13 @@ export const useBooks = () => {
   const totalPage = useSelector(selectTotalPage);
   const newBook = useSelector(selectNewBooks);
   const readBook = useSelector(selectReadBook);
+  const ownBook = useSelector(selectOwnBook);
 
   return {
     books,
     totalPage,
     newBook,
     readBook,
+    ownBook,
   };
 };
