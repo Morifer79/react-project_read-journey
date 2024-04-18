@@ -58,9 +58,9 @@ To get started with this project, follow the installation instructions below.
 <a href="https://morifer79.github.io/react-project_read-journey/"><img src="https://badgen.net/badge/🌎 www:/Read Journey/yellow?icon=browser" alt="Badge"/></a>  
 
 5. Open to view file Layout:  
-<a href="https://www.figma.com/file/z3m0rdBcEfLTJUBDkAKhWQ/BOOKS-READING?type=design&node-id=18743%3A4973&mode=design&t=Hi1KTaUJMogWXZzz-1"><img src="https://badgen.net/badge/🎴 www:/Read Journey/green?icon=browser" alt="Badge"/></a>  
+<a href="https://www.figma.com/file/z3m0rdBcEfLTJUBDkAKhWQ/BOOKS-READING?type=design&node-id=18743%3A4973&mode=design&t=Hi1KTaUJMogWXZzz-1"><img src="https://badgen.net/badge/🎴 layout:/Read Journey/green?icon=browser" alt="Badge"/></a>  
 
 ## 𝔼𝕞𝕒𝕚𝕝 𝕞𝕖 ᎓
 Questions, suggestions, help:  
-<a href="mailto:cyber-morifer@proton.me"><img src="https://badgen.net/badge/📧 email:/cyber-morifer@proton.me/yellow?icon=email" alt="Mail Badge"/></a>
+<a href="mailto:cyber-morifer@proton.me"><img src="https://badgen.net/badge/📧 email:/cyber-morifer@proton.me/orange?icon=email" alt="Mail Badge"/></a>
    
