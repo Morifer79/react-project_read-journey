@@ -13,8 +13,7 @@ export const GlobalStyle = createGlobalStyle`
   
   html,
   body {
-    inline-size: 100%;
-    height: 100vh;
+    min-block-size: 100vh;
     scrollbar-color: #888 #f1f1f1;
     scrollbar-width: thin;
     scrollbar-gutter: stable;

@@ -34,6 +34,7 @@ export const BtnDetails = styled.button`
   svg {
     inline-size: 16px;
     block-size: 16px;
+    transition: stroke ${theme.transition};
     @media screen and (min-width: 768px) {
       inline-size: 20px;
       block-size: 20px;

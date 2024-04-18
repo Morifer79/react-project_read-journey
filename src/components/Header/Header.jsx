@@ -28,51 +28,46 @@ export const Header = () => {
   };
 
   return (
-    <>
-      <HeaderWrapper>
-        <LogoBox>
-          <Logo src={logo} />
-          <span>read journey</span>
-        </LogoBox>
-        <Navigation />
-        {isLoggedIn && (
-          <FlexWrapper>
-            <UserAvatar>
-              <span>{firstLetter}</span>
-            </UserAvatar>
-            <h4>{user.name}</h4>
-            <BtnLogout type="button" onClick={() => dispatch(logOut())}>
-              <span>Log out</span>
-            </BtnLogout>
-          </FlexWrapper>
-        )}
-        {isMenuOpen ? (
-          <>
-            <BtnMenu type="button" onClick={toggleMenu}>
-              <svg width="28" height="28">
-                <use xlinkHref={`${SpriteIcons}#icon-x`} />
-              </svg>
-            </BtnMenu>
-            <MobileMenu>
-              <Navigation />
-              {isLoggedIn && (
-                <MobileBtnLogout
-                  type="button"
-                  onClick={() => dispatch(logOut())}
-                >
-                  <span>Log out</span>
-                </MobileBtnLogout>
-              )}
-            </MobileMenu>
-          </>
-        ) : (
+    <HeaderWrapper>
+      <LogoBox>
+        <Logo src={logo} />
+        <span>read journey</span>
+      </LogoBox>
+      <Navigation />
+      {isLoggedIn && (
+        <FlexWrapper>
+          <UserAvatar>
+            <span>{firstLetter}</span>
+          </UserAvatar>
+          <h4>{user.name}</h4>
+          <BtnLogout type="button" onClick={() => dispatch(logOut())}>
+            <span>Log out</span>
+          </BtnLogout>
+        </FlexWrapper>
+      )}
+      {isMenuOpen ? (
+        <>
           <BtnMenu type="button" onClick={toggleMenu}>
             <svg width="28" height="28">
-              <use xlinkHref={`${SpriteIcons}#icon-menu`} />
+              <use xlinkHref={`${SpriteIcons}#icon-x`} />
             </svg>
           </BtnMenu>
-        )}
-      </HeaderWrapper>
-    </>
+          <MobileMenu>
+            <Navigation />
+            {isLoggedIn && (
+              <MobileBtnLogout type="button" onClick={() => dispatch(logOut())}>
+                <span>Log out</span>
+              </MobileBtnLogout>
+            )}
+          </MobileMenu>
+        </>
+      ) : (
+        <BtnMenu type="button" onClick={toggleMenu}>
+          <svg width="28" height="28">
+            <use xlinkHref={`${SpriteIcons}#icon-menu`} />
+          </svg>
+        </BtnMenu>
+      )}
+    </HeaderWrapper>
   );
 };
