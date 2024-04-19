@@ -5,6 +5,7 @@ import { Field } from 'formik';
 export const StyledSelect = styled(Field)`
   padding: ${theme.spacing(6)} ${theme.spacing(7)};
   max-inline-size: 120px;
+
   border-radius: ${theme.radii.m};
   color: ${theme.colors.light};
   background-color: ${theme.colors.primary};
@@ -35,13 +36,11 @@ export const LibraryList = styled.ul`
   @media screen and (max-width: 1439px) {
     justify-content: center;
   }
-  /* margin: 0 auto; */
-  margin-block-start: ${theme.spacing(11)};
+  margin-block-start: ${theme.spacing(7)};
   display: flex;
   gap: ${theme.spacing(10.5)};
 
   @media screen and (min-width: 768px) {
-    margin-block-start: ${theme.spacing(10)};
     flex-wrap: wrap;
     gap: ${theme.spacing(12.5)};
   }
@@ -56,15 +55,18 @@ export const NoImageBox = styled.div`
   padding-block: ${theme.spacing(30)};
   max-inline-size: 197px;
   text-align: center;
+
   @media screen and (min-width: 768px) {
     max-inline-size: 274px;
   }
+
   img {
     padding: ${theme.spacing(12.5)};
     margin-block-end: ${theme.spacing(5)};
-    display: inline-block;
     inline-size: 100px;
     block-size: 100px;
+
+    display: inline-block;
     border-radius: ${theme.radii.xxl};
     background-color: ${theme.colors.secondary};
     @media screen and (min-width: 768px) {
@@ -73,6 +75,7 @@ export const NoImageBox = styled.div`
       block-size: 130px;
     }
   }
+
   p {
     font-size: 14px;
     line-height: 1.285;

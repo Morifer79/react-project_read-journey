@@ -16,8 +16,8 @@ export const Section = styled.div`
 
   @media screen and (min-width: 1440px) {
     margin-block-end: ${theme.spacing(0)};
+    padding: ${theme.spacing(20)} ${theme.spacing(10)} ${theme.spacing(10)};
     inline-size: 353px;
     flex-direction: column;
-    padding: ${theme.spacing(20)} ${theme.spacing(10)} ${theme.spacing(10)};
   }
 `;

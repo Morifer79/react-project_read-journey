@@ -5,6 +5,7 @@ import { Field } from 'formik';
 export const StyledSelect = styled(Field)`
   padding: ${theme.spacing(6)} ${theme.spacing(7)};
   max-inline-size: 120px;
+
   border-radius: ${theme.radii.m};
   color: ${theme.colors.light};
   background-color: ${theme.colors.primary};

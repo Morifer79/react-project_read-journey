@@ -1,18 +1,14 @@
-import {
-  DiaryBody,
-  VerticalLine,
-} from './DiaryBlock.styled';
+import { DiaryBody } from './DiaryBlock.styled';
 import { DiaryItem } from './DiaryItem/DiaryItem';
 import { useBooks } from '../../../../../hooks/useBooks';
 
 export const DiaryBlock = () => {
-  const {readBook}= useBooks();
+  const { readBook } = useBooks();
 
   return (
     <>
       {readBook.timeLeftToRead && (
         <DiaryBody>
-          <VerticalLine />
           <ul>
             {readBook.progress
               .slice()

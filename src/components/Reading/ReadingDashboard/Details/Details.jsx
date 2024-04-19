@@ -7,9 +7,13 @@ import {
 } from './DiaryBlock/DiaryBlock.styled';
 import SpriteIcons from '../../../../images/sprite.svg';
 import { useState } from 'react';
+import { useBooks } from '../../../../hooks/useBooks';
 
 export const Details = () => {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
+  const { readBook } = useBooks();
+  console.log(readBook);
+  
 
   const diaryClick = () => {
     setShow(true);
@@ -20,7 +24,7 @@ export const Details = () => {
   };
 
   return (
-    <>
+    <div>
       <FlexWrapper>
         <h3>{show ? 'Diary' : 'Statistics'}</h3>
         <BtnBox>
@@ -37,6 +41,6 @@ export const Details = () => {
         </BtnBox>
       </FlexWrapper>
       {show ? <DiaryBlock /> : <StatisticsBlock />}
-    </>
+    </div>
   );
 };

@@ -13,13 +13,10 @@ export const GlobalStyle = createGlobalStyle`
   
   html,
   body {
-    min-block-size: 100vh;
-    scrollbar-color: #888 #f1f1f1;
-    scrollbar-width: thin;
+    overflow-y: auto;
+
     scrollbar-gutter: stable;
-
     box-sizing: border-box;
-
     font-family: "Gilroy", sans-serif;
     font-size: 16px;
     font-weight: 500;
@@ -28,6 +25,24 @@ export const GlobalStyle = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     background: ${theme.colors.main};
     color: ${theme.colors.light};
+    ::-webkit-scrollbar {
+      inline-size: 5px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: rgba(18, 20, 23, 0.05);
+      inline-size: 3px;
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: ${theme.colors.brd};
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(18, 20, 23, 0.05);
+    }
   }
 
   code {

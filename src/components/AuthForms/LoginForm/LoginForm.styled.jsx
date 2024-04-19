@@ -20,6 +20,7 @@ export const BtnLogin = styled.button`
     margin-block-start: ${theme.spacing(66)};
     margin-inline-end: ${theme.spacing(10)};
     padding: ${theme.spacing(8)} ${theme.spacing(27)};
+
     span {
       font-size: 20px;
       line-height: 1;

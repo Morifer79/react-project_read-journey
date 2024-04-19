@@ -27,10 +27,12 @@ export const StatisticsBody = styled.div`
 
   @media screen and (min-width: 768px) {
     margin-block-start: ${theme.spacing(8)};
+    min-inline-size: 321px;
     padding: ${theme.spacing(14)};
   }
   @media screen and (min-width: 1440px) {
     padding: ${theme.spacing(10)};
+    min-inline-size: 313px;
   }
 
   span {

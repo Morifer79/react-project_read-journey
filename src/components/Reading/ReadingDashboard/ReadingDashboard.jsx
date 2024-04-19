@@ -5,12 +5,12 @@ import { Details } from './Details/Details';
 import { useBooks } from '../../../hooks/useBooks';
 
 export const ReadingDashboard = () => {
-  const { newBook } = useBooks();
+  const { readBook} = useBooks();
 
   return (
     <Dashboard>
       <AddReading />
-      {newBook.status === 'unread' ? <ProgressBlock /> : <Details />}
+      {readBook.status === 'unread' ? <ProgressBlock /> : <Details />}
     </Dashboard>
   );
 };

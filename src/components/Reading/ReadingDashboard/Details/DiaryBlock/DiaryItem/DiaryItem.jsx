@@ -1,8 +1,8 @@
-import { BtnDel, LeftSide, RightSide } from './DiaryItem.styled';
+import { BtnDel, FlexWrapper, LeftSide, RightSide, VerticalLine } from './DiaryItem.styled';
 import { removeReading } from '../../../../../../redux/books/booksOperations';
 import { useDispatch } from 'react-redux';
-import SpriteIcons from '../../../../../../images/sprite.svg';
 import { useBooks } from '../../../../../../hooks/useBooks';
+import SpriteIcons from '../../../../../../images/sprite.svg';
 
 export const DiaryItem = ({ info }) => {
   const dispatch = useDispatch();
@@ -32,11 +32,12 @@ export const DiaryItem = ({ info }) => {
   };
 
   return (
-    <>
+    <FlexWrapper>
       <LeftSide>
         <svg>
           <use xlinkHref={`${SpriteIcons}#icon-diary-dot`} />
         </svg>
+        <VerticalLine />
         <div>
           <h4>{finishConvertDate ? finishConvertDate : startConvertDate}</h4>
           <h5>{percentage} %</h5>
@@ -57,6 +58,6 @@ export const DiaryItem = ({ info }) => {
           </svg>
         </BtnDel>
       </RightSide>
-    </>
+    </FlexWrapper>
   );
 };

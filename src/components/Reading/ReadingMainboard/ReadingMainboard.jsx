@@ -1,36 +1,16 @@
 import { Mainboard } from 'components/Constructor/Mainboard/Mainboard';
-import { BtnStartStop, ImageBox, InfoBlock } from './ReadingMainboard.styled';
-import { useState } from 'react';
+import { BtnStartStop, ImageBox } from './ReadingMainboard.styled';
 import { useBooks } from '../../../hooks/useBooks';
 import SpriteIcons from '../../../images/sprite.svg';
 import noImg from '../../../images/no-image.png';
 
 export const ReadingMainboard = () => {
-  const [show, setShow] = useState(false);
   const { readBook } = useBooks();
   const { imageUrl, title, author, timeLeftToRead, status } = readBook;
-
-  const toggleTime = () => {
-    return timeLeftToRead.hours !== 'undefined' ? setShow(!show) : null;
-  };
 
   return (
     <Mainboard>
       <h3>My reading</h3>
-      {show && (
-        <InfoBlock>
-          <p>Time Left:</p>
-          <h5>
-            <span>{timeLeftToRead.hours}</span> hours
-          </h5>
-          <h5>
-            <span>{timeLeftToRead.minutes}</span> minutes
-          </h5>
-          <h5>
-            <span>{timeLeftToRead.seconds}</span> seconds
-          </h5>
-        </InfoBlock>
-      )}
       <ImageBox>
         <img src={imageUrl ? imageUrl : noImg} alt="book" />
         <div>
@@ -38,7 +18,7 @@ export const ReadingMainboard = () => {
             <h4>{title}</h4>
             <h5>{author}</h5>
           </div>
-          <BtnStartStop onClick={toggleTime}>
+          <BtnStartStop>
             {!timeLeftToRead && status !== 'unread' ? (
               <svg>
                 <use xlinkHref={`${SpriteIcons}#icon-stop`} />

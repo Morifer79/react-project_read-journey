@@ -1,7 +1,22 @@
 import styled from 'styled-components';
 import { theme } from '../../../../../../styleset/theme';
 
+export const FlexWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  gap: ${theme.spacing(55)};
+
+  @media screen and (min-width: 768px) {
+    gap: ${theme.spacing(51)};
+  }
+
+  @media screen and (min-width: 1440px) {
+    gap: ${theme.spacing(43)};
+  }
+`;
+
 export const LeftSide = styled.div`
+  position: relative;
   z-index: 1;
   display: flex;
   gap: ${theme.spacing(5)};
@@ -9,6 +24,7 @@ export const LeftSide = styled.div`
   svg {
     inline-size: 16px;
     block-size: 16px;
+
     @media screen and (min-width: 768px) {
       inline-size: 20px;
       block-size: 20px;
@@ -27,7 +43,7 @@ export const LeftSide = styled.div`
   }
 
   div h5 {
-    margin-block-end: ${theme.spacing(2)};
+    margin-block-end: ${theme.spacing(4)};
     font-size: 14px;
     font-weight: 500;
     line-height: 1.285;
@@ -47,6 +63,19 @@ export const LeftSide = styled.div`
       font-size: 12px;
       line-height: 1.166;
     }
+  }
+`;
+
+export const VerticalLine = styled.div`
+  position: absolute;
+  z-index: -1;
+  width: 2px;
+  height: 115%;
+  left: 7px;
+  background: ${theme.colors.primary};
+
+  @media screen and (min-width: 768px) {
+    left: 9px;
   }
 `;
 
@@ -72,7 +101,7 @@ export const RightSide = styled.div`
 
   div svg {
     margin-block-end: ${theme.spacing(3.5)};
-    inline-size: 43px;
+    inline-size: 46px;
     block-size: 18px;
     @media screen and (min-width: 768px) {
       inline-size: 59px;
@@ -81,7 +110,7 @@ export const RightSide = styled.div`
   }
 
   div h5 {
-    max-inline-size: 43px;
+    max-inline-size: 46px;
     color: ${theme.colors.lightgrey};
     font-size: 10px;
     font-weight: 500;

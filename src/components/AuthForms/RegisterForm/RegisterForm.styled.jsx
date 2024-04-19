@@ -65,8 +65,8 @@ export const Title = styled.h1`
   color: ${theme.colors.error};
 
   @media screen and (min-width: 768px) {
-    max-inline-size: 444px;
     margin-block-end: ${theme.spacing(20)};
+    max-inline-size: 444px;
     font-size: 64px;
     line-height: 0.94;
   }
@@ -95,10 +95,11 @@ export const Label = styled.label`
 `;
 
 export const StyledInput = styled(Field)`
-  position: relative;
-  inline-size: 100%;
   margin-block-end: ${theme.spacing(4)};
   padding: ${theme.spacing(7)};
+
+  position: relative;
+  inline-size: 100%;
   border-radius: ${theme.radii.m};
   border: none;
   outline: none;
@@ -109,19 +110,19 @@ export const StyledInput = styled(Field)`
   color: ${theme.colors.light};
 
   &[name='name'] {
-    padding-inline-start: 62px;
+    padding-inline-start: ${theme.spacing(31)};
   }
   &[name='email'] {
-    padding-inline-start: 49px;
+    padding-inline-start: ${theme.spacing(24.5)};
   }
   &[name='password'] {
-    padding-inline-start: 83px;
+    padding-inline-start: ${theme.spacing(41.5)};
   }
   &[name='page'] {
-    padding-inline-start: 111px;
+    padding-inline-start: ${theme.spacing(55.5)};
   }
   &[name='pages'] {
-    padding-inline-start: 135px;
+    padding-inline-start: ${theme.spacing(67.5)};
   }
 
   &.success {
@@ -138,9 +139,10 @@ export const StyledInput = styled(Field)`
 `;
 
 export const ErrMsg = styled(ErrorMessage)`
+  margin-block-end: ${theme.spacing(9)};
+
   font-size: 12px;
   color: ${theme.colors.accent};
-  margin-block-end: ${theme.spacing(9)};
 `;
 
 export const EyeBtn = styled.button`
@@ -170,6 +172,7 @@ export const BtnSubmit = styled.button`
     margin-block-start: ${theme.spacing(34)};
     margin-inline-end: ${theme.spacing(10)};
     padding: ${theme.spacing(8)} ${theme.spacing(27)};
+
     span {
       font-size: 20px;
       line-height: 1;
@@ -209,8 +212,8 @@ export const AuthLink = styled(NavLink)`
 `;
 
 export const HeroImg = styled.img`
-  inline-size: 100%;
   margin-block-start: ${theme.spacing(5)};
+  inline-size: 100%;
   border-radius: ${theme.radii.xl};
 
   @media screen and (min-width: 768px) and (max-width: 1439px) {

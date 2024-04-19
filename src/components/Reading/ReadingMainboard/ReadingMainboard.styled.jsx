@@ -2,10 +2,20 @@ import styled from 'styled-components';
 import { theme } from '../../../styleset/theme';
 
 export const ImageBox = styled.div`
+  margin-block-start: ${theme.spacing(10)};
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
+
+  @media screen and (min-width: 768px) {
+    margin-block-start: ${theme.spacing(16)};
+  }
+
+  @media screen and (min-width: 1440px) {
+    margin-block-start: ${theme.spacing(22)};
+  }
+
   img {
     margin-block-end: ${theme.spacing(5)};
     border-radius: ${theme.radii.s};
@@ -51,24 +61,6 @@ export const ImageBox = styled.div`
     @media screen and (min-width: 768px) {
       margin-block-end: ${theme.spacing(12.5)};
     }
-  }
-`;
-
-export const InfoBlock = styled.div`
-  position: absolute;
-  top: 560px;
-  @media screen and (min-width: 768px) {
-    top: 450px;
-  }
-  @media screen and (min-width: 1440px) {
-    top: 200px;
-  }
-  span {
-    color: ${theme.colors.light};
-  }
-
-  h5 {
-    color: ${theme.colors.lightgrey};
   }
 `;
 
