@@ -25,11 +25,13 @@ const GlobalContainer = styled.div`
 export const SharedLayout = () => {
   const location = useLocation();
   const userLocation =
-    location.pathname === '/register' || location.pathname === '/login';
+    location.pathname === '/reading' ||
+    location.pathname === '/recommended' ||
+    location.pathname === '/library';
 
   return (
     <GlobalContainer>
-      {!userLocation && <Header />}
+      {userLocation && <Header />}
       <main>
         <Suspense fallback={<Loader />}>
           <Outlet />
