@@ -19,6 +19,9 @@ export const Progress = styled.div`
     font-size: 14px;
     font-weight: 500;
     line-height: 1.285;
+    @media screen and (min-width: 768px) {
+      inline-size: 313px;
+    }
   }
 
   img {

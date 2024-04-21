@@ -4,13 +4,14 @@ import { useBooks } from '../../../../../hooks/useBooks';
 
 export const DiaryBlock = () => {
   const { readBook } = useBooks();
+  const { timeLeftToRead, progress } = readBook;
 
   return (
     <>
-      {readBook.timeLeftToRead && (
+      {timeLeftToRead && (
         <DiaryBody>
           <ul>
-            {readBook.progress
+            {progress
               .slice()
               .reverse()
               .map(item => (

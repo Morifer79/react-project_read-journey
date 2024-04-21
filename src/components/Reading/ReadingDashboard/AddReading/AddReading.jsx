@@ -21,9 +21,8 @@ import * as Yup from 'yup';
 export const AddReading = () => {
   const [isReading, setIsReading] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const dispatch = useDispatch();
   const { readBook } = useBooks();
-  const id = readBook._id;
+  const dispatch = useDispatch();
 
   const pageSchema = Yup.object({
     page: Yup.number()
@@ -37,6 +36,8 @@ export const AddReading = () => {
     setIsModalOpen(false);
     document.body.style.overflow = '';
   };
+
+  const id = readBook._id;
 
   const handleStart = ({ page }, { resetForm }) => {
     if (!isReading) {

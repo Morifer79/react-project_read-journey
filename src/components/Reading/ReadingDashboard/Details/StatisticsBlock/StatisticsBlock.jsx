@@ -10,7 +10,11 @@ import {
 
 export const StatisticsBlock = () => {
   const { readBook } = useBooks();
-  const { status, totalPages } = readBook;
+  const { progress, totalPages } = readBook;
+
+  const finishPageArr = progress.map(item => item.finishPage);
+  const finishPage = finishPageArr.slice(-1);
+  const percentage = ((finishPage / totalPages) * 100).toFixed(2);
   
   return (
     <>
@@ -22,7 +26,7 @@ export const StatisticsBlock = () => {
       <StatisticsBody>
         <CircleWrapper>
           <Circle
-            percent={15}
+            percent={percentage}
             strokeWidth={8}
             trailWidth={8}
             strokeColor="#30B94D"
@@ -33,9 +37,8 @@ export const StatisticsBlock = () => {
         <Wrapper>
           <ProgressClr />
           <div>
-            {/* временное решение ❗ */}
-            <h4>{status} %</h4>
-            <h5>{totalPages} pages read</h5>
+            <h4>{percentage} %</h4>
+            <h5>{finishPage} pages read</h5>
           </div>
         </Wrapper>
       </StatisticsBody>
