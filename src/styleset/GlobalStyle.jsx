@@ -13,8 +13,6 @@ export const GlobalStyle = createGlobalStyle`
   
   html,
   body {
-    overflow-y: auto;
-
     scrollbar-gutter: stable;
     box-sizing: border-box;
     font-family: "Gilroy", sans-serif;

@@ -75,7 +75,7 @@ export const BtnMenu = styled.button`
   block-size: 40px;
   background: transparent;
   border: none;
-  z-index: 1;
+  z-index: 2;
 
   &:is(:hover, :focus) {
     scale: 1.1;
@@ -88,30 +88,37 @@ export const BtnMenu = styled.button`
 
 export const MobileMenu = styled.div`
   @media screen and (max-width: 767px) {
-    position: absolute;
+    position: fixed;
     top: 0;
-    right: 0;
-    block-size: 100vh;
-    background-color: ${theme.colors.secondary};
-    animation: changeAnimation 1s cubic-bezier(0.25, 0.1, 0.25, 1) both;
+    right: -200px;
+    z-index: 1;
 
-    @keyframes changeAnimation {
+    inline-size: 200px;
+    block-size: 100%;
+
+    background-color: ${theme.colors.secondary};
+    animation: fade-in 0.5s forwards;
+
+    @keyframes fade-in {
       0% {
-        inline-size: 0;
+        width: 100px;
       }
       100% {
-        inline-size: 45%;
+        width: 200px;
       }
     }
 
     ul {
-      position: absolute;
-      top: 280px;
-      left: 35%;
-
+      block-size: 100vh;
       display: flex;
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
       gap: ${theme.spacing(10)};
+    }
+
+    &.active {
+      transform: translateX(-100%);
     }
   }
 `;
@@ -206,30 +213,5 @@ export const NavMenu = styled.ul`
   gap: ${theme.spacing(16)};
   @media screen and (max-width: 767px) {
     display: none;
-  }
-`;
-
-export const NavItem = styled(NavLink)`
-  position: relative;
-  padding-block-end: ${theme.spacing(4)};
-  color: ${theme.colors.lightgrey};
-  font-size: 14px;
-  line-height: 1.285;
-  transition: color ${theme.transition};
-
-  &:is(.active, :hover, :focus) {
-    color: ${theme.colors.light};
-  }
-
-  &.active::after,
-  &:hover::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background-color: ${theme.colors.active};
-    border-radius: ${theme.radii.m};
   }
 `;

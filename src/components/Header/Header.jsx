@@ -25,6 +25,13 @@ export const Header = () => {
 
   const toggleMenu = () => {
     setIsMenuOpen(prevMenuOpen => !prevMenuOpen);
+    isMenuOpen
+      ? (document.body.style.overflowY = 'auto')
+      : (document.body.style.overflowY = 'hidden');
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
   };
 
   return (
@@ -52,8 +59,8 @@ export const Header = () => {
               <use xlinkHref={`${SpriteIcons}#icon-x`} />
             </svg>
           </BtnMenu>
-          <MobileMenu>
-            <Navigation />
+          <MobileMenu className={`${isMenuOpen ? 'active' : ''}`}>
+            <Navigation onClose={closeMenu} />
             {isLoggedIn && (
               <MobileBtnLogout type="button" onClick={() => dispatch(logOut())}>
                 <span>Log out</span>
