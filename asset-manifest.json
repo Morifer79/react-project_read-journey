@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-project_read-journey/static/css/main.4cd93efb.css",
-    "main.js": "/react-project_read-journey/static/js/main.365248b3.js",
+    "main.js": "/react-project_read-journey/static/js/main.e9f6fd4d.js",
     "static/js/72.c931977f.chunk.js": "/react-project_read-journey/static/js/72.c931977f.chunk.js",
     "static/js/98.b53d3bec.chunk.js": "/react-project_read-journey/static/js/98.b53d3bec.chunk.js",
     "static/js/164.76a460f0.chunk.js": "/react-project_read-journey/static/js/164.76a460f0.chunk.js",
@@ -21,7 +21,7 @@
     "static/media/sprite.svg": "/react-project_read-journey/static/media/sprite.0bad312d11781e815706763115b6f873.svg",
     "index.html": "/react-project_read-journey/index.html",
     "main.4cd93efb.css.map": "/react-project_read-journey/static/css/main.4cd93efb.css.map",
-    "main.365248b3.js.map": "/react-project_read-journey/static/js/main.365248b3.js.map",
+    "main.e9f6fd4d.js.map": "/react-project_read-journey/static/js/main.e9f6fd4d.js.map",
     "72.c931977f.chunk.js.map": "/react-project_read-journey/static/js/72.c931977f.chunk.js.map",
     "98.b53d3bec.chunk.js.map": "/react-project_read-journey/static/js/98.b53d3bec.chunk.js.map",
     "164.76a460f0.chunk.js.map": "/react-project_read-journey/static/js/164.76a460f0.chunk.js.map",
@@ -33,6 +33,6 @@
   },
   "entrypoints": [
     "static/css/main.4cd93efb.css",
-    "static/js/main.365248b3.js"
+    "static/js/main.e9f6fd4d.js"
   ]
 }
