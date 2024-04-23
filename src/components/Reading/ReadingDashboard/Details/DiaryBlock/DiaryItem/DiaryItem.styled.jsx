@@ -141,3 +141,7 @@ export const BtnDel = styled.button`
     stroke: ${theme.colors.accent};
   }
 `;
+
+export const Container = styled.div`
+  padding-inline-start: ${theme.spacing(62.5)};
+`;

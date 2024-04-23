@@ -64,6 +64,7 @@ export const DiaryBody = styled.div`
   @media screen and (min-width: 1440px) {
     padding: ${theme.spacing(10)};
     block-size: 373px;
+    inline-size: 313px;
   }
 
   ul {

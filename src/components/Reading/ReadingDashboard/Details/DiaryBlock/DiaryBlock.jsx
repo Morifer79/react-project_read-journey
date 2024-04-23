@@ -4,24 +4,22 @@ import { useBooks } from '../../../../../hooks/useBooks';
 
 export const DiaryBlock = () => {
   const { readBook } = useBooks();
-  const { timeLeftToRead, progress } = readBook;
+  const { progress } = readBook;
 
   return (
-    <>
-      {timeLeftToRead && (
-        <DiaryBody>
-          <ul>
-            {progress
-              .slice()
-              .reverse()
-              .map(item => (
-                <li key={item._id}>
-                  <DiaryItem info={item} />
-                </li>
-              ))}
-          </ul>
-        </DiaryBody>
-      )}
-    </>
+    <DiaryBody>
+      <ul>
+        {progress
+          ?.slice()
+          .reverse()
+          .map(item => {
+            return (
+              <li key={item._id}>
+                <DiaryItem info={item} />
+              </li>
+            );
+          })}
+      </ul>
+    </DiaryBody>
   );
 };
