@@ -32,6 +32,7 @@ export const Header = () => {
 
   const closeMenu = () => {
     setIsMenuOpen(false);
+    document.body.style.overflowY = 'auto';
   };
 
   return (
