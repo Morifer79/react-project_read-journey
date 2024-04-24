@@ -47,30 +47,44 @@ export const ImageBox = styled.div`
   }
 `;
 
-export const CommonThumb = styled.div`
-  margin-block-end: ${theme.spacing(5)};
-  display: inline-block;
-  position: relative;
-  inline-size: 137px;
-  block-size: 208px;
+export const BtnStartStop = styled.button`
+  inline-size: 40px;
+  block-size: 40px;
+  border: none;
+  background: transparent;
+  border-radius: ${theme.radii.xxl};
+  transition: 1s;
+
   @media screen and (min-width: 768px) {
-    margin-block-end: ${theme.spacing(12.5)};
-    inline-size: 169px;
-    block-size: 256px;
+    inline-size: 50px;
+    block-size: 50px;
   }
-  @media screen and (min-width: 1440px) {
-    inline-size: 224px;
-    block-size: 340px;
-  }
-  &:hover .imageAfter {
-    width: 100%;
+  svg {
+    inline-size: 40px;
+    block-size: 40px;
+    transition: 1s;
+    @media screen and (min-width: 768px) {
+      inline-size: 50px;
+      block-size: 50px;
+    }
   }
 `;
 
-export const ImageThumb = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
+export const CommonThumb = styled.div`
+  margin-block-end: ${theme.spacing(12.5)};
+  position: relative;
+  inline-size: 224px;
+  block-size: 340px;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+
+  @media screen and (min-width: 768px) {
+    margin-block-end: ${theme.spacing(12.5)};
+  }
+
+  &:is(:hover, :focus) {
+    transform: rotateY(-180deg);
+  }
 
   img {
     border-radius: ${theme.radii.s};
@@ -85,33 +99,27 @@ export const ImageThumb = styled.div`
       block-size: 340px;
     }
   }
-
-  &.imageAfter {
-    inline-size: 0;
-    transition: 1s;
-    overflow: hidden;
-  }
 `;
 
-export const BtnStartStop = styled.button`
-  cursor: auto;
-  inline-size: 40px;
-  block-size: 40px;
-  border: none;
-  background: transparent;
-  border-radius: ${theme.radii.xxl};
+export const FrontSide = styled.div`
+  backface-visibility: hidden;
+`;
 
-  @media screen and (min-width: 768px) {
-    inline-size: 50px;
-    block-size: 50px;
-  }
-  svg {
-    inline-size: 40px;
-    block-size: 40px;
-    transition: 1s;
-    @media screen and (min-width: 768px) {
-      inline-size: 50px;
-      block-size: 50px;
-    }
+export const BackSide = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: ${theme.radii.s};
+  backface-visibility: hidden;
+  line-height: 1.29;
+
+  transform: rotateY(-180deg);
+  transition: transform ${theme.transition};
+
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
   }
 `;
