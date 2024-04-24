@@ -1,7 +1,7 @@
 import { PopUp } from '../../../../PopUp/PopUp';
 import { RecommendedModalContent } from '../../../RecommendedModalContent/RecommendedModalContent';
 import { useState } from 'react';
-import { CardWrapper } from './RecommendedBookCard.styled';
+import { CardWrapper, ImageThumb } from './RecommendedBookCard.styled';
 import noImg from '../../../../../images/no-image.png';
 
 export const RecommendedBookCard = ({ books }) => {
@@ -21,7 +21,9 @@ export const RecommendedBookCard = ({ books }) => {
   return (
     <>
       <CardWrapper onClick={openModal}>
-        <img src={imageUrl ? imageUrl : noImg} alt={title} />
+        <ImageThumb>
+          <img src={imageUrl ? imageUrl : noImg} alt={title} />
+        </ImageThumb>
         <h4>{title}</h4>
         <h5>{author}</h5>
       </CardWrapper>

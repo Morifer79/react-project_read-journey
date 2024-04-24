@@ -1,8 +1,9 @@
 import { Mainboard } from 'components/Constructor/Mainboard/Mainboard';
-import { BtnStartStop, ImageBox } from './ReadingMainboard.styled';
+import { BtnStartStop, CommonThumb, ImageBox, ImageThumb } from './ReadingMainboard.styled';
 import { useBooks } from '../../../hooks/useBooks';
 import SpriteIcons from '../../../images/sprite.svg';
 import noImg from '../../../images/no-image.png';
+import shadows from '../../../images/shadows.jpg';
 
 export const ReadingMainboard = () => {
   const { readBook } = useBooks();
@@ -12,7 +13,14 @@ export const ReadingMainboard = () => {
     <Mainboard>
       <h3>My reading</h3>
       <ImageBox>
-        <img src={imageUrl ? imageUrl : noImg} alt="book" />
+        <CommonThumb>
+          <ImageThumb>
+            <img src={imageUrl ? imageUrl : noImg} alt="book" />
+          </ImageThumb>
+          <ImageThumb className="imageAfter">
+            <img src={shadows} alt="people" />
+          </ImageThumb>
+        </CommonThumb>
         <div>
           <div>
             <h4>{title}</h4>

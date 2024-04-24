@@ -16,23 +16,6 @@ export const ImageBox = styled.div`
     margin-block-start: ${theme.spacing(22)};
   }
 
-  img {
-    margin-block-end: ${theme.spacing(5)};
-    border-radius: ${theme.radii.s};
-    inline-size: 137px;
-    block-size: 208px;
-    @media screen and (min-width: 768px) {
-      margin-block-end: ${theme.spacing(12.5)};
-      border-radius: ${theme.radii.s};
-      inline-size: 169px;
-      block-size: 256px;
-    }
-    @media screen and (min-width: 1440px) {
-      inline-size: 224px;
-      block-size: 340px;
-    }
-  }
-
   h4 {
     margin-block-end: ${theme.spacing(2.5)};
     max-inline-size: 146px;
@@ -64,17 +47,59 @@ export const ImageBox = styled.div`
   }
 `;
 
+export const CommonThumb = styled.div`
+  margin-block-end: ${theme.spacing(5)};
+  display: inline-block;
+  position: relative;
+  inline-size: 137px;
+  block-size: 208px;
+  @media screen and (min-width: 768px) {
+    margin-block-end: ${theme.spacing(12.5)};
+    inline-size: 169px;
+    block-size: 256px;
+  }
+  @media screen and (min-width: 1440px) {
+    inline-size: 224px;
+    block-size: 340px;
+  }
+  &:hover .imageAfter {
+    width: 100%;
+  }
+`;
+
+export const ImageThumb = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  img {
+    border-radius: ${theme.radii.s};
+    inline-size: 137px;
+    block-size: 208px;
+    @media screen and (min-width: 768px) {
+      inline-size: 169px;
+      block-size: 256px;
+    }
+    @media screen and (min-width: 1440px) {
+      inline-size: 224px;
+      block-size: 340px;
+    }
+  }
+
+  &.imageAfter {
+    inline-size: 0;
+    transition: 1s;
+    overflow: hidden;
+  }
+`;
+
 export const BtnStartStop = styled.button`
+  cursor: auto;
   inline-size: 40px;
   block-size: 40px;
   border: none;
   background: transparent;
   border-radius: ${theme.radii.xxl};
-  transition: 1s;
-
-  &:is(:hover, :focus) {
-    scale: 1.1;
-  }
 
   @media screen and (min-width: 768px) {
     inline-size: 50px;
@@ -88,8 +113,5 @@ export const BtnStartStop = styled.button`
       inline-size: 50px;
       block-size: 50px;
     }
-  }
-  svg:is(:hover, :focus) {
-    scale: 1.1;
   }
 `;

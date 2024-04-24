@@ -8,6 +8,11 @@ export const Wrapper = styled.div`
     cursor: pointer;
     inline-size: 137px;
     block-size: 208px;
+    transition: filter ${theme.transition};
+
+    &:is(:hover, :focus){
+      filter: sepia(80%)
+    }
   }
   h4 {
     margin-block-end: ${theme.spacing(2)};
