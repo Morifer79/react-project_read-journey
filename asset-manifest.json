@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/react-project_read-journey/static/css/main.4cd93efb.css",
-    "main.js": "/react-project_read-journey/static/js/main.30dcb7f4.js",
+    "main.js": "/react-project_read-journey/static/js/main.497afffd.js",
     "static/js/72.c931977f.chunk.js": "/react-project_read-journey/static/js/72.c931977f.chunk.js",
     "static/js/98.b53d3bec.chunk.js": "/react-project_read-journey/static/js/98.b53d3bec.chunk.js",
-    "static/js/164.76a460f0.chunk.js": "/react-project_read-journey/static/js/164.76a460f0.chunk.js",
-    "static/js/93.24d71da6.chunk.js": "/react-project_read-journey/static/js/93.24d71da6.chunk.js",
-    "static/js/350.286440a6.chunk.js": "/react-project_read-journey/static/js/350.286440a6.chunk.js",
+    "static/js/164.1a627604.chunk.js": "/react-project_read-journey/static/js/164.1a627604.chunk.js",
+    "static/js/93.e3b8783c.chunk.js": "/react-project_read-journey/static/js/93.e3b8783c.chunk.js",
+    "static/js/573.cab2f7bf.chunk.js": "/react-project_read-journey/static/js/573.cab2f7bf.chunk.js",
     "static/js/668.843fac5d.chunk.js": "/react-project_read-journey/static/js/668.843fac5d.chunk.js",
     "static/js/7.0bb1c727.chunk.js": "/react-project_read-journey/static/js/7.0bb1c727.chunk.js",
     "static/js/948.b7b57e59.chunk.js": "/react-project_read-journey/static/js/948.b7b57e59.chunk.js",
@@ -15,6 +15,7 @@
     "static/media/auth.png": "/react-project_read-journey/static/media/auth.53ea8a94140b8aab9da9.png",
     "static/media/Gilroy-Medium.ttf": "/react-project_read-journey/static/media/Gilroy-Medium.1c23f810e531d0702f76.ttf",
     "static/media/Gilroy-Bold.ttf": "/react-project_read-journey/static/media/Gilroy-Bold.901a60fc2835c74fba67.ttf",
+    "static/media/shadows.jpg": "/react-project_read-journey/static/media/shadows.0b8de0df4568bccb8096.jpg",
     "static/media/Gilroy-Medium.woff": "/react-project_read-journey/static/media/Gilroy-Medium.5329bc502cdc219ad294.woff",
     "static/media/Gilroy-Bold.woff": "/react-project_read-journey/static/media/Gilroy-Bold.0607a1bc636f63251ed8.woff",
     "static/media/Gilroy-Medium.woff2": "/react-project_read-journey/static/media/Gilroy-Medium.acd4e613de34a826c191.woff2",
@@ -22,12 +23,12 @@
     "static/media/sprite.svg": "/react-project_read-journey/static/media/sprite.0bad312d11781e815706763115b6f873.svg",
     "index.html": "/react-project_read-journey/index.html",
     "main.4cd93efb.css.map": "/react-project_read-journey/static/css/main.4cd93efb.css.map",
-    "main.30dcb7f4.js.map": "/react-project_read-journey/static/js/main.30dcb7f4.js.map",
+    "main.497afffd.js.map": "/react-project_read-journey/static/js/main.497afffd.js.map",
     "72.c931977f.chunk.js.map": "/react-project_read-journey/static/js/72.c931977f.chunk.js.map",
     "98.b53d3bec.chunk.js.map": "/react-project_read-journey/static/js/98.b53d3bec.chunk.js.map",
-    "164.76a460f0.chunk.js.map": "/react-project_read-journey/static/js/164.76a460f0.chunk.js.map",
-    "93.24d71da6.chunk.js.map": "/react-project_read-journey/static/js/93.24d71da6.chunk.js.map",
-    "350.286440a6.chunk.js.map": "/react-project_read-journey/static/js/350.286440a6.chunk.js.map",
+    "164.1a627604.chunk.js.map": "/react-project_read-journey/static/js/164.1a627604.chunk.js.map",
+    "93.e3b8783c.chunk.js.map": "/react-project_read-journey/static/js/93.e3b8783c.chunk.js.map",
+    "573.cab2f7bf.chunk.js.map": "/react-project_read-journey/static/js/573.cab2f7bf.chunk.js.map",
     "668.843fac5d.chunk.js.map": "/react-project_read-journey/static/js/668.843fac5d.chunk.js.map",
     "7.0bb1c727.chunk.js.map": "/react-project_read-journey/static/js/7.0bb1c727.chunk.js.map",
     "948.b7b57e59.chunk.js.map": "/react-project_read-journey/static/js/948.b7b57e59.chunk.js.map",
@@ -35,6 +36,6 @@
   },
   "entrypoints": [
     "static/css/main.4cd93efb.css",
-    "static/js/main.30dcb7f4.js"
+    "static/js/main.497afffd.js"
   ]
 }
