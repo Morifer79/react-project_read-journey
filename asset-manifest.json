@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/react-project_read-journey/static/css/main.4cd93efb.css",
-    "main.js": "/react-project_read-journey/static/js/main.34ed8feb.js",
+    "main.css": "/react-project_read-journey/static/css/main.cb68e809.css",
+    "main.js": "/react-project_read-journey/static/js/main.21cff483.js",
     "static/js/72.c931977f.chunk.js": "/react-project_read-journey/static/js/72.c931977f.chunk.js",
     "static/js/98.b53d3bec.chunk.js": "/react-project_read-journey/static/js/98.b53d3bec.chunk.js",
     "static/js/164.1a627604.chunk.js": "/react-project_read-journey/static/js/164.1a627604.chunk.js",
-    "static/js/93.e3b8783c.chunk.js": "/react-project_read-journey/static/js/93.e3b8783c.chunk.js",
-    "static/js/573.750ddb54.chunk.js": "/react-project_read-journey/static/js/573.750ddb54.chunk.js",
+    "static/js/302.b06e9e3e.chunk.js": "/react-project_read-journey/static/js/302.b06e9e3e.chunk.js",
+    "static/js/573.889c259a.chunk.js": "/react-project_read-journey/static/js/573.889c259a.chunk.js",
     "static/js/668.843fac5d.chunk.js": "/react-project_read-journey/static/js/668.843fac5d.chunk.js",
     "static/js/7.0bb1c727.chunk.js": "/react-project_read-journey/static/js/7.0bb1c727.chunk.js",
     "static/js/948.b7b57e59.chunk.js": "/react-project_read-journey/static/js/948.b7b57e59.chunk.js",
-    "static/js/91.08a805ea.chunk.js": "/react-project_read-journey/static/js/91.08a805ea.chunk.js",
+    "static/js/862.ee70917d.chunk.js": "/react-project_read-journey/static/js/862.ee70917d.chunk.js",
+    "static/js/623.f0ded21d.chunk.js": "/react-project_read-journey/static/js/623.f0ded21d.chunk.js",
     "static/media/404.png": "/react-project_read-journey/static/media/404.deeb848376410253926e.png",
     "static/media/auth.png": "/react-project_read-journey/static/media/auth.53ea8a94140b8aab9da9.png",
     "static/media/Gilroy-Medium.ttf": "/react-project_read-journey/static/media/Gilroy-Medium.1c23f810e531d0702f76.ttf",
@@ -22,20 +23,21 @@
     "static/media/Gilroy-Bold.woff2": "/react-project_read-journey/static/media/Gilroy-Bold.ef7c40ff1efeaaa4c7c6.woff2",
     "static/media/sprite.svg": "/react-project_read-journey/static/media/sprite.0bad312d11781e815706763115b6f873.svg",
     "index.html": "/react-project_read-journey/index.html",
-    "main.4cd93efb.css.map": "/react-project_read-journey/static/css/main.4cd93efb.css.map",
-    "main.34ed8feb.js.map": "/react-project_read-journey/static/js/main.34ed8feb.js.map",
+    "main.cb68e809.css.map": "/react-project_read-journey/static/css/main.cb68e809.css.map",
+    "main.21cff483.js.map": "/react-project_read-journey/static/js/main.21cff483.js.map",
     "72.c931977f.chunk.js.map": "/react-project_read-journey/static/js/72.c931977f.chunk.js.map",
     "98.b53d3bec.chunk.js.map": "/react-project_read-journey/static/js/98.b53d3bec.chunk.js.map",
     "164.1a627604.chunk.js.map": "/react-project_read-journey/static/js/164.1a627604.chunk.js.map",
-    "93.e3b8783c.chunk.js.map": "/react-project_read-journey/static/js/93.e3b8783c.chunk.js.map",
-    "573.750ddb54.chunk.js.map": "/react-project_read-journey/static/js/573.750ddb54.chunk.js.map",
+    "302.b06e9e3e.chunk.js.map": "/react-project_read-journey/static/js/302.b06e9e3e.chunk.js.map",
+    "573.889c259a.chunk.js.map": "/react-project_read-journey/static/js/573.889c259a.chunk.js.map",
     "668.843fac5d.chunk.js.map": "/react-project_read-journey/static/js/668.843fac5d.chunk.js.map",
     "7.0bb1c727.chunk.js.map": "/react-project_read-journey/static/js/7.0bb1c727.chunk.js.map",
     "948.b7b57e59.chunk.js.map": "/react-project_read-journey/static/js/948.b7b57e59.chunk.js.map",
-    "91.08a805ea.chunk.js.map": "/react-project_read-journey/static/js/91.08a805ea.chunk.js.map"
+    "862.ee70917d.chunk.js.map": "/react-project_read-journey/static/js/862.ee70917d.chunk.js.map",
+    "623.f0ded21d.chunk.js.map": "/react-project_read-journey/static/js/623.f0ded21d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4cd93efb.css",
-    "static/js/main.34ed8feb.js"
+    "static/css/main.cb68e809.css",
+    "static/js/main.21cff483.js"
   ]
 }
