@@ -1,40 +1,49 @@
-import { BtnWrapper } from "components/Recommended/RecommendedMainboard/Pagination/Pagination.styled";
-import { Form, Formik } from "formik";
-import { StyledSelect } from "./SelectionBlock.styled";
-import { useDispatch } from "react-redux";
-import { useEffect } from "react";
-import { LibraryBookList } from "../LibraryBookList/LibraryBookList";
-import { getOwnBook } from "../../../../redux/books/booksOperations";
-import { useQueryParams } from "hooks/useQueryParams";
-
+import { BtnWrapper } from 'components/Recommended/RecommendedMainboard/Pagination/Pagination.styled';
+import { useDispatch } from 'react-redux';
+import { useEffect, useState } from 'react';
+import { LibraryBookList } from '../LibraryBookList/LibraryBookList';
+import { getOwnBook } from '../../../../redux/books/booksOperations';
+import { useQueryParams } from 'hooks/useQueryParams';
+import Select from 'react-select';
 
 export const SelectionBlock = () => {
+  const [currentBook, setCurrentBook] = useState('all-books');
   const dispatch = useDispatch();
   const { selectBook, changeBook } = useQueryParams();
 
-useEffect(() => {
-  dispatch(getOwnBook({ status: selectBook }));
-}, [dispatch, selectBook]);
+  const options = [
+    { value: 'unread', label: 'Unread' },
+    { value: 'in-progress', label: 'In progress' },
+    { value: 'done', label: 'Done' },
+    { value: 'all-books', label: 'All books' },
+  ];
+
+  const getValue = () => {
+    return currentBook ? options.find(book => book.value === currentBook) : '';
+  };
+
+  const handleChange = newValue => {
+    setCurrentBook(newValue.value);
+    changeBook(newValue.value);
+  };
+
+  useEffect(() => {
+    dispatch(getOwnBook({ status: selectBook }));
+  }, [dispatch, selectBook]);
 
   return (
     <>
       <BtnWrapper>
         <h3>My library</h3>
-        <Formik>
-          <Form>
-            <StyledSelect
-              as="select"
-              name="books"
-              value={selectBook}
-              onChange={e => changeBook(e.target.value)}
-            >
-              <option value="unread">Unread</option>
-              <option value="in-progress">In progress</option>
-              <option value="done">Done</option>
-              <option value="all-books">All books</option>
-            </StyledSelect>
-          </Form>
-        </Formik>
+        <Select
+          classNamePrefix="custom-select"
+          name="books"
+          defaultValue={currentBook}
+          options={options}
+          value={getValue()}
+          onChange={handleChange}
+          isSearchable={false}
+        />
       </BtnWrapper>
       <LibraryBookList status={selectBook} />
     </>

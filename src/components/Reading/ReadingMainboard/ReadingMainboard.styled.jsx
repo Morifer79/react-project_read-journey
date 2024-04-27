@@ -53,6 +53,7 @@ export const BtnStartStop = styled.button`
   border: none;
   background: transparent;
   border-radius: ${theme.radii.xxl};
+  cursor: auto;
   transition: 1s;
 
   @media screen and (min-width: 768px) {

@@ -33,6 +33,7 @@ In reading mode it is possible to track progress by different data (percentage, 
 ※ [Redux Toolkit](https://redux-toolkit.js.org): State management for React applications.  
 ※ [Styled Components](https://styled-components.com): Styling library for React components.  
 ※ [Formik](https://formik.org/) and [Yup](https://formik.org/docs/tutorial#schema-validation-with-yup): for data collection and validation.  
+※ [React Select](https://react-select.com/): to use select and better style it.  
 ※ [Axios](https://axios-http.com): HTTP client for database operation.  
 ※ [Swagger](https://readjourney.b.goit.study/api-docs/): for authorization and database.  
 ※ [Progress Bar](https://www.npmjs.com/package/rc-progress): Progress Bar.  
